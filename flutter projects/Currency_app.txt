@@ -1,0 +1,48 @@
+import 'package:flutter/material.dart';
+
+void main(){
+  runApp(const  MyApp());
+}
+class MyApp extends StatelessWidget{
+  const MyApp ({super.key});
+  @override
+  Widget build(BuildContext context){
+    return const MaterialApp(
+      home: Scaffold(
+        backgroundColor:Color.fromARGB(255, 242, 242, 245),
+        body:Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Convert your currency",
+            style: TextStyle(
+              color: Color.fromARGB(121, 123, 190, 46),
+              fontSize: 31,
+              fontWeight: FontWeight.bold,
+            ),
+            ),
+            TextField(
+              decoration: InputDecoration(
+                prefixIcon: Icon(Icons.monetization_on) ,
+                fillColor: Colors.white,
+                hintText: "Enter your currency in USD",
+                hintStyle: TextStyle(
+                  color: Colors.black,
+                  fontSize: 24,
+                  fontStyle: FontStyle.italic
+
+                )
+              ),
+              style: TextStyle(
+                color: Color.fromARGB(54, 87, 90, 213),
+                fontSize: 45,
+                fontWeight: FontWeight.normal
+              ),
+            ),
+          ],
+        ),
+
+      ),
+    );
+  }
+}
+
